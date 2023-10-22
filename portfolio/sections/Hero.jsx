@@ -14,7 +14,7 @@ const Hero = () => (
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className={`${styles.innerWidth} flex flex-col`}
+      className={`${styles.innerWidth} flex flex-col contain`}
     >
       <div className="flex justify-center text-[50px] sm:text-[127px] items-center flex-col relative z-10 text-color-text-primary font-titleFont">
         I'm Yash.

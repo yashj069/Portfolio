@@ -9,12 +9,14 @@ const MyApp = ({ Component, pageProps }) => (
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
       <link rel="preconnect" href="https://stijndv.com" />
+      <link rel="preload" href="./font/acorn.woff" as="font" />
+      <link rel="preload" href="./font/gt.woff" as="font" />
       <link
         rel="stylesheet"
         href="https://stijndv.com/fonts/Eudoxus-Sans.css"
       />
     </Head>
-    <div>
+    <div className="bg-color-primary contain">
       <Navbar />
       <Component {...pageProps} />
       <Footer />

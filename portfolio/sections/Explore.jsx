@@ -6,7 +6,7 @@ const Explore = () => {
   return (
     <section
       id="explore"
-      className={`${styles.paddings} w-full bg-color-primary`}
+      className={`${styles.paddings} bg-color-primary flex contain`}
     >
       <div className="flex flex-col sm:flex-row sm:flex-wrap bg-color-white30 rounded-[64px] p-paddin sm:px-[120px] gap-y-[40px]">
         {collaborate.map((item, idx) => {

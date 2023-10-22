@@ -6,8 +6,40 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Eudoxus Sans", sans-serif, acorn;
+  font-family: "Eudoxus Sans", sans-serif, "acorn", "gt";
   scroll-behavior: smooth;
+  max-width: 100%;
+  /* margin: auto; */
+}
+
+.contain {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  justify-content: center;
+}
+
+/* body {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+} */
+
+@font-face {
+  font-family: acorn;
+  src: url(/font/acorn.ttf) format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: gt;
+  src: url(/font/gt.woff) format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 :root {

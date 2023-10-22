@@ -3,7 +3,7 @@ import { Explore, GetStarted, Hero } from "../../sections";
 import styles from "../../styles";
 
 const About = () => (
-  <>
+  <div className="contain">
     <Hero />
     <section
       className={`${styles.xPaddings} sm:ml-[21%] relative z-10 bg-color-primary rounded-l-2xl`}
@@ -22,7 +22,7 @@ const About = () => (
     </section>
     <Explore />
     <GetStarted />
-  </>
+  </div>
 );
 
 export default About;

@@ -22,7 +22,7 @@ export const Main = () => {
   }, [query]);
 
   return (
-    <div className="relative">
+    <div className="relative contain">
       <About />
     </div>
   );

@@ -1,48 +1,30 @@
 "use client";
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { ExploreCard, TypingText, TitleText } from "../components";
-import { staggerContainer } from "../utils/motion";
-import { exploreWorlds } from "../constants";
+import { collaborate } from "../constants";
 import styles from "../styles";
 
 const Explore = () => {
-  const [active, setActive] = useState("world-2");
-
   return (
-    <section id="explore" className={`${styles.paddings}`}>
-      <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className={`flex flex-col mx-auto ${styles.innerWidth}`}
-      >
-        <TypingText title="| The Worlds" textStyles="text-center" />
-        <TitleText
-          title={
-            <>
-              Choose the world you want <br className="md:block hidden" /> to
-              explore
-            </>
-          }
-          textStyles="text-center"
-        />
-        <div
-          className="mt-[50px] flex lg:flex-row flex-col
-        min-h-[70vh] gap-5"
-        >
-          {exploreWorlds.map((world, index) => (
-            <ExploreCard
-              key={world.id}
-              {...world}
-              index={index}
-              active={active}
-              handleClick={setActive}
-            />
-          ))}
-        </div>
-      </motion.div>
+    <section
+      id="explore"
+      className={`${styles.paddings} w-full bg-color-primary`}
+    >
+      <div className="flex flex-col sm:flex-row sm:flex-wrap bg-color-white30 rounded-[64px] p-paddin sm:px-[120px] gap-y-[40px]">
+        {collaborate.map((item, idx) => {
+          return (
+            <div className="flex flex-col sm:w-[50%] justify-start">
+              <h1 className="font-titleFont mb-[24px] text-[42px] text-color-text-primary opacity-[0.5]">
+                0{idx + 1}
+              </h1>
+              <h2 className={`${styles.secondaryHeading}`}>{item.title}</h2>
+              <p
+                className={`${styles.primaryContent} mt-spacing-xxs sm:w-[90%]`}
+              >
+                {item.description}
+              </p>
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 };

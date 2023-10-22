@@ -1,54 +1,61 @@
 "use client";
-
-import { motion } from "framer-motion";
-import { footerVariants } from "../utils/motion";
 import styles from "../styles";
-import { socials } from "../constants";
+import SpotifyIcon from "../icons/SpotifyIcon";
+import { footerLinks } from "../constants";
 
 const Footer = () => (
-  <motion.footer
-    variants={footerVariants}
-    initial="hidden"
-    whileInView="show"
-    className={`${styles.xPaddings} py-8 relative`}
+  <div
+    className={`${styles.xPaddings} sm:py-8 relative bg-color-primary pb-[45px] sm:pt-[80px] rounded-t-2xl`}
   >
-    <div
-      className={`${styles.innerWidth}  mx-auto flex flex-col gap-[40px] text-white`}
-    >
-      <div className="flex flex-row justify-between">
-        <h1 className="md:text-[64px] text-[48px] leading-[60px] md:leading-[81px] font-bold">
-          Enter the Metaverse{" "}
-        </h1>
-        <div className="flex flex-row gap-2 justify-between mt-[20px] md:mt-[0px] bg-[#25618B] rounded-[32px] w-[246px] h-[64px] items-center px-6 md:px-8">
-          <img
-            src="/headset.svg"
-            alt="headset"
-            className="h-[18px] w-[18px] md:h-[24px] md:w-[24px] object-contain"
-          />
-          <h1 className="text-[12px] md:text-[16px] leading-[20px]">
-            ENTER METAVERSE
-          </h1>
+    <div className="flex flex-col sm:flex-row justify-between sm:w-[60%] mx-auto pb-[45px] pt-[100px] rounded-t-2xl">
+      <div className="flex flex-col justify-between sm:px-0 px-2 sm:w-[50%] gap-10">
+        <div className="flex gap-4 bg-color-green500 items-center py-[16px] pr-[42px] pl-[20px] rounded-[50px] h-[80px]">
+          <SpotifyIcon />
+          <div className="flex flex-col justify-between">
+            <p className="text-[#EDE7DE] text-[.9375rem] opacity-[0.8] ">
+              On repeat
+            </p>
+            <p className="text-[#EDE7DE] text-[.9375rem] font-semibold">
+              Memory lane by shawn mendes
+            </p>
+          </div>
         </div>
+        <div>© 2023 Yash Jindal</div>
       </div>
-      <div className="h-[2px] w-full bg-white opacity-[0.1]" />
-      <div className="text-white flex flex-col md:flex-row justify-between items-center gap-3">
-        <h1 className="font-bold text-[24px] leading-[30px]">METAVERUS</h1>
-        <p className="text-[14px] leading-[21px] text-secondary-white">
-          Copyright © 2021 - 2022 Metaversus. All rights reserved.
-        </p>
-        <div className="flex flex-row gap-4">
-          {socials.map((social) => (
-            <img
-              src={social.url}
-              key={social.name}
-              alt={social.name}
-              className="w-[24px] h-[24px] object-contain cursor-pointer"
-            />
-          ))}
+
+      {/* // Right side */}
+      <div className="flex sm:w-[50%] sm:justify-end px-10 sm:px-0 gap-10">
+        <div className="flex flex-col leading-[24px] gap-5 text-font-link">
+          <h1
+            className={`${styles.secondaryHeading} font-[600] text-font-link`}
+          >
+            ElseWhere
+          </h1>
+          {footerLinks.map((item) => {
+            return (
+              <p
+                className={`${styles.primaryContent} cursor-pointer text-font-link font-[600]`}
+              >
+                {item}
+              </p>
+            );
+          })}
+        </div>
+        <div className="flex flex-col leading-[24px] gap-5 text-font-link">
+          <h1
+            className={`${styles.secondaryHeading} text-font-link font-[600]`}
+          >
+            Contact
+          </h1>
+          <p
+            className={`${styles.primaryContent} text-font-link font-[600] cursor-pointer`}
+          >
+            Message
+          </p>
         </div>
       </div>
     </div>
-  </motion.footer>
+  </div>
 );
 
 export default Footer;

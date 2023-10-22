@@ -1,11 +1,11 @@
 import Head from "next/head";
-
 import "../styles/globals.css";
+import { Footer, Navbar } from "../components";
 
 const MyApp = ({ Component, pageProps }) => (
   <>
     <Head>
-      <title>Metaversus</title>
+      <title>Yash</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
       <link rel="preconnect" href="https://stijndv.com" />
@@ -14,7 +14,11 @@ const MyApp = ({ Component, pageProps }) => (
         href="https://stijndv.com/fonts/Eudoxus-Sans.css"
       />
     </Head>
-    <Component {...pageProps} />
+    <div>
+      <Navbar />
+      <Component {...pageProps} />
+      <Footer />
+    </div>
   </>
 );
 

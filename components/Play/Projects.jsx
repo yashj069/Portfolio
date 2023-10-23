@@ -4,7 +4,7 @@ import styles from "../../styles";
 import { projectDescription } from "../../constants";
 
 const Projects = () => {
-  return (
+  return typeof window !== "undefined" ? (
     <Masonry className={st.collageContainer} columns={3} gap={26}>
       {projectDescription.map((item, index) => {
         return (
@@ -24,7 +24,7 @@ const Projects = () => {
         );
       })}
     </Masonry>
-  );
+  ) : null;
 };
 
 export default Projects;

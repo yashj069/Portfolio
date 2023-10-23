@@ -8,10 +8,10 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <motion.nav
-      variants={navVariants}
-      initial="hidden"
-      whileInView="show"
-      className={`${styles.xPaddings} py-8 relative contain flex justify-center`}
+      // variants={navVariants}
+      // initial="hidden"
+      // whileInView="show"
+      className={`${styles.xPaddings} py-8 contain flex fixed top-0 left-0 right-0 z-[10000] justify-center`}
       style={{ maxWidth: "fit-content" }}
     >
       <div className="absolute  inset-0 graident-01" />

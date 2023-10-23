@@ -19,6 +19,27 @@ export const navVariants = {
   },
 };
 
+export const bodyVariants = {
+  hidden: {
+    opacity: 0.5,
+    y: -50,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 140,
+    },
+  },
+  show: {
+    opacity: 1,
+    y: 100,
+    transition: {
+      type: "spring",
+      stiffness: 40,
+      delay: 0.01,
+    },
+  },
+};
+
 export const slideIn = (direction, type, delay, duration) => ({
   hidden: {
     x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,

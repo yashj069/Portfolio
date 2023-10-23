@@ -1,52 +1,29 @@
+import Masonry from "react-layout-masonry";
+import st from "./index.module.css";
 import styles from "../../styles";
+import { projectDescription } from "../../constants";
 
 const Projects = () => {
   return (
-    <div className="flex flex-wrap contain gap-[25px]">
-      <div className="flex p-[42px] bg-color-white30 items-start gap-[14px] rounded-xl cursor-pointer font-bodyFont text-[16px]">
-        <div className="flex flex-col gap-[16px] ">
-          <h1 className={`${styles.primaryHeading} pt-0 text-[23px]`}>
-            Wire Box
-          </h1>
-          <p className={`${styles.primaryContent} font-[500]`}>
-            Turn hi-fi designs to lo-fi in one click - comes in nasty pink.
-          </p>
-        </div>
-      </div>
-
-      <div className="flex p-[42px] bg-color-white30 items-start gap-[14px] rounded-xl cursor-pointer font-bodyFont text-[16px]">
-        <div className="flex flex-col gap-[16px] ">
-          <h1 className={`${styles.primaryHeading} pt-0 text-[23px]`}>
-            Wire Box
-          </h1>
-          <p className={`${styles.primaryContent} font-[500]`}>
-            Turn hi-fi designs to lo-fi in one click - comes in nasty pink.
-          </p>
-        </div>
-      </div>
-
-      <div className="flex p-[42px] bg-color-white30 items-start gap-[14px] rounded-xl cursor-pointer font-bodyFont text-[16px]">
-        <div className="flex flex-col gap-[16px] ">
-          <h1 className={`${styles.primaryHeading} pt-0 text-[23px]`}>
-            Wire Box
-          </h1>
-          <p className={`${styles.primaryContent} font-[500]`}>
-            Turn hi-fi designs to lo-fi in one click - comes in nasty pink.
-          </p>
-        </div>
-      </div>
-
-      <div className="flex p-[42px] bg-color-white30 items-start gap-[14px] rounded-xl cursor-pointer font-bodyFont text-[16px]">
-        <div className="flex flex-col gap-[16px] ">
-          <h1 className={`${styles.primaryHeading} pt-0 text-[23px]`}>
-            Wire Box
-          </h1>
-          <p className={`${styles.primaryContent} font-[500]`}>
-            Turn hi-fi designs to lo-fi in one click - comes in nasty pink.
-          </p>
-        </div>
-      </div>
-    </div>
+    <Masonry className={st.collageContainer} columns={3} gap={26}>
+      {projectDescription.map((item, index) => {
+        return (
+          <div
+            key={index}
+            style={{ transition: "all ease-in-out 0.3" }}
+            className={`rounded-xl bg-color-white30 flex gap-10 max-w-[430px] flex-wrap p-[42px] hover:transition-all ease-in-out duration-300 translate-y-2`}
+          >
+            <div className="flex flex-col items-start gap-4">
+              <h1 className={`${styles.primaryHeading} text-[20px] pt-0`}>
+                {item.title}
+              </h1>
+              <p className={`${styles.primaryContent}`}>{item.description}</p>
+            </div>
+            <img src={item.image} className="rounded-xl" />
+          </div>
+        );
+      })}
+    </Masonry>
   );
 };
 

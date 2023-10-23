@@ -36,3 +36,47 @@ export const footerLinks = [
   { title: "Twitter", link: "https://twitter.com/yashj_069" },
   { title: "Instagram", link: "https://www.instagram.com/yashjindal09/" },
 ];
+
+export const projectDescription = [
+  {
+    title: "Rizzle",
+    link: "https://rizzle.com/",
+    image: "/rizzleImg.png",
+    description: "fdsfd",
+  },
+  {
+    title: "Degen Run",
+    link: "https://degenrun.com/",
+    image: "/degen.png",
+    description:
+      "Degen Run is a Web Game. Made with Unity3D and C# for scripting.",
+  },
+  {
+    title: "Metaverse",
+    link: "https://metaverse-yashj069.vercel.app/",
+    image: "/metaverse2.png",
+    description:
+      "METAVERSE is a Modern Next 13 Website With Framer Motion & Tailwind CSS.",
+  },
+  {
+    title: "Sociopedia",
+    link: "https://sociopedia-eosin.vercel.app/",
+    image: "/sociopedia1.png",
+    description:
+      "Sociopedia is a social media app that allows users to connect with friends, view profiles, post pictures, and like posts. With a Dark mode feature to enhance user experience and provide a visually appealing interface",
+  },
+  {
+    title: "Theme Switcher",
+    link: "https://github.com/yashj069/Theme-Swicher",
+    image: "/theme.png",
+    description:
+      "Theme Switcher is a Chrome Extension that will turn the current tab to dark mode if the page is already in light mode vica verca.",
+  },
+  {
+    title: "LOBT",
+    link: "https://lobt-iota.vercel.app/",
+    image: "/lobt.png",
+    description:
+      "LOBT is a freelance project made with React.js and TailwindCSS.",
+  },
+];

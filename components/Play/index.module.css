@@ -1,0 +1,11 @@
+.collageContainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 90%;
+  height: 120vh;
+}
+
+.trans {
+  transition: all 0.3s ease-in-out;
+}

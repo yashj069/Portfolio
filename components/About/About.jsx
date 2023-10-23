@@ -1,9 +1,16 @@
 "use client";
 import { Explore, GetStarted, Hero } from "../../sections";
 import styles from "../../styles";
+import { motion } from "framer-motion";
+import { bodyVariants, navVariants } from "../../utils/motion";
 
 const About = () => (
-  <div className="contain">
+  <motion.div
+    variants={bodyVariants}
+    initial="hidden"
+    whileInView="show"
+    className="contain"
+  >
     <Hero />
     <section
       className={`${styles.xPaddings} sm:ml-[21%] relative z-10 bg-color-primary rounded-l-2xl`}
@@ -22,7 +29,7 @@ const About = () => (
     </section>
     <Explore />
     <GetStarted />
-  </div>
+  </motion.div>
 );
 
 export default About;

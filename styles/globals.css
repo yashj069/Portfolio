@@ -13,6 +13,124 @@
   /* margin: auto; */
 }
 
+.header {
+  /* background-size: 400% 400%; */
+  width: 100%;
+  background: linear-gradient(-45deg, #d9b99b, #faf0e6, #fff0db, #eed9c4);
+  animation: animate 15s ease infinite;
+}
+
+.trans {
+  transition: all 0.8s ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.gl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+}
+.project {
+  transition: all 0.3s ease-in-out;
+}
+.project:hover {
+  transform: translateY(-5px);
+}
+
+/* .animateHero {
+  width: 100%;
+  background-color: var(--color-primary);
+  animation: example 30s ease infinite;
+}
+@keyframes example {
+  0% {
+    background-color: #d9b99b;
+  }
+  25% {
+    background-color: rgba(60, 107, 60, 0.577);
+  }
+  50% {
+    background-color: #fff0db;
+  }
+  100% {
+    background-color: #eed9c4;
+  }
+} */
+
+.partition {
+  width: 100%;
+  height: 2px;
+  background-color: #d9b99b;
+}
+
+.animateHero {
+  width: 100%;
+  /* height: 100vh; */
+  background: linear-gradient(90deg, #d9b99b, #afa192, #fff0db, #eed9c4);
+  background-size: 400% 100%;
+  animation: gradientAnimation 30s linear infinite;
+}
+
+@keyframes gradientAnimation {
+  /* 0% {
+    background-position: 100% 0;
+  }
+  25% {
+    background-position: 50% 0;
+  }
+  50% {
+    background-position: -50% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  } */
+  0% {
+    background-color: #d9b99b;
+    background-position: 100% 80%;
+  }
+  25% {
+    background-color: #afa192;
+    background-position: 80% 0;
+  }
+  50% {
+    background-color: #fff0db;
+    background-position: 20% 0;
+  }
+  100% {
+    background-color: #ffebd7;
+    background-position: 100% 0;
+  }
+
+  /* 0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  } */
+}
+
+.scrolled {
+  background-color: hsla(45, 17%, 95%, 0.8);
+  /* transition: all 0.5s ease-in-out; */
+  transition: background-color 0.3s;
+  backdrop-filter: blur(20px) saturate(1.7);
+  -webkit-backdrop-filter: blur(20px) saturate(1.7);
+}
+
 .contain {
   width: 100%;
   max-width: 100%;
@@ -20,12 +138,6 @@
   overflow: hidden;
   justify-content: center;
 }
-
-/* body {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-} */
 
 @font-face {
   font-family: acorn;

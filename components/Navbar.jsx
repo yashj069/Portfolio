@@ -6,51 +6,72 @@ import styles from "../styles";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import st from "./index.module.css";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const { pathname } = useRouter();
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <motion.nav
-      // variants={navVariants}
-      // initial="hidden"
-      // whileInView="show"
-      className={`${styles.xPaddings}  py-8 contain flex fixed top-0 left-0 right-0 z-[10000] justify-center`}
+      variants={navVariants}
+      initial="hidden"
+      whileInView="show"
+      className={`${styles.xPaddings} py-8 contain flex fixed top-0 left-0 right-0 z-[10000] justify-center`}
       style={{ maxWidth: "fit-content" }}
     >
       <div className="absolute inset-0 graident-01" />
       <div
-        className={`${styles.innerWidth} flex justify-center gap-8 contain items-center px-[20px] text-[18px] bg-[#233831B2]  rounded-[50px] w-[30%] h-[60px] text-white`}
+        className={`${styles.innerWidth} ${st.trans} ${
+          scrolled ? "scrolled" : ""
+        } flex justify-center contain items-center px-[20px] text-[18px] rounded-[50px] w-[30%] h-[60px] text-color-text-secondary`}
       >
         <Link
           href={"/"}
           className={`${
             pathname === "/" ? st.navbarActive : ""
-          } cursor-pointer z-10`}
+          } cursor-pointer z-10 px-6 py-[0.40rem] rounded-3xl`}
         >
           About
         </Link>
         <Link
           className={`${
             pathname === "/play" ? st.navbarActive : ""
-          } cursor-pointer z-10`}
+          } cursor-pointer px-6 py-[0.40rem] z-10 rounded-3xl`}
           href={"/play"}
         >
           Play
         </Link>
         <Link
           className={`${
-            pathname === "/contact" ? st.navbarActive : ""
-          } cursor-pointer z-10`}
-          href="/play"
+            pathname === "/skills" ? st.navbarActive : ""
+          } cursor-pointer px-6 py-[0.40rem] z-10 rounded-3xl`}
+          href="/skills"
         >
-          Contact
+          Skills
         </Link>
         <Link
           className={`${
             pathname === "/contact" ? st.navbarActive : ""
-          } cursor-pointer z-10`}
-          href="/play"
+          } cursor-pointer px-6 py-[0.40rem] z-10 rounded-3xl`}
+          href="/contact"
         >
           Contact
         </Link>

@@ -1,6 +1,7 @@
 "use client";
 import { Explore, GetStarted, Hero } from "../../sections";
 import styles from "../../styles";
+import st from "../index.module.css";
 import { motion } from "framer-motion";
 import { bodyVariants, navVariants } from "../../utils/motion";
 
@@ -9,11 +10,11 @@ const About = () => (
     variants={bodyVariants}
     initial="hidden"
     whileInView="show"
-    className="contain"
+    className={`contain`}
   >
     <Hero />
     <section
-      className={`${styles.xPaddings} sm:ml-[21%] relative z-10 bg-color-primary rounded-l-2xl`}
+      className={`${styles.xPaddings} sm:ml-[21%] relative bg-color-primary rounded-l-2xl`}
     >
       <div className="flex flex-col gap-8 rounded-l-lg">
         <h1 className={`${styles.primaryHeading} font-semibold`}>

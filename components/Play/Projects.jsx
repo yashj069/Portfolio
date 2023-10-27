@@ -20,8 +20,8 @@ const Projects = () => {
           return (
             <div
               key={index}
-              style={{ transition: "all ease-in-out 0.3" }}
-              className={`rounded-xl bg-color-white30 flex gap-10 max-w-[430px] flex-wrap p-[24px] sm:p-[42px]`}
+              // style={{ transition: "all ease-in-out 0.3" }}
+              className={`${st.project} project rounded-xl z-50 bg-color-white30 flex gap-10 max-w-[430px] flex-wrap p-[24px] sm:p-[42px]`}
             >
               <div className="flex flex-col items-start gap-4">
                 <h1

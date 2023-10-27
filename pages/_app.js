@@ -16,7 +16,8 @@ const MyApp = ({ Component, pageProps }) => (
         href="https://stijndv.com/fonts/Eudoxus-Sans.css"
       />
     </Head>
-    <div className="bg-color-primary contain">
+    <div className="bg-color-primary contain animateHero">
+      {/* <div className="animateHero gl" /> */}
       <Navbar />
       <Component {...pageProps} />
       <Footer />

@@ -14,7 +14,7 @@ const About = () => (
   >
     <Hero />
     <section
-      className={`${styles.xPaddings} sm:ml-[21%] relative bg-color-primary rounded-l-2xl`}
+      className={`${styles.xPaddings} sm:ml-[21%] relative bg-color-primary md:rounded-l-2xl`}
     >
       <div className="flex flex-col gap-8 rounded-l-lg">
         <h1 className={`${styles.primaryHeading} font-semibold`}>

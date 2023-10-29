@@ -34,27 +34,27 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className={`${styles.xPaddings} py-8 contain flex fixed top-0 left-0 right-0 z-[10000] justify-center`}
+      className={`py-8 contain flex fixed top-0 left-0 right-0 z-[10000] justify-center`}
       style={{ maxWidth: "fit-content" }}
     >
       <div className="absolute inset-0 graident-01" />
       <div
         className={`${styles.innerWidth} ${st.trans} ${
-          scrolled ? "scrolled" : ""
-        } flex justify-center contain items-center px-[20px] text-[18px] rounded-[50px] w-[30%] h-[60px] text-color-text-secondary`}
+          scrolled ? "scrolled px-4" : ""
+        } flex justify-center contain items-center sm:px-[20px] text-[18px] rounded-[50px] w-[30%] h-[60px] text-color-text-secondary`}
       >
         <Link
           href={"/"}
           className={`${
             pathname === "/" ? st.navbarActive : ""
-          } cursor-pointer z-10 px-6 py-[0.40rem] rounded-3xl`}
+          } cursor-pointer z-10 px-4 sm:px-6 py-[0.40rem] rounded-3xl`}
         >
           About
         </Link>
         <Link
           className={`${
             pathname === "/play" ? st.navbarActive : ""
-          } cursor-pointer px-6 py-[0.40rem] z-10 rounded-3xl`}
+          } cursor-pointer px-4 sm:px-6 py-[0.40rem] z-10 rounded-3xl`}
           href={"/play"}
         >
           Play
@@ -62,7 +62,7 @@ const Navbar = () => {
         <Link
           className={`${
             pathname === "/skills" ? st.navbarActive : ""
-          } cursor-pointer px-6 py-[0.40rem] z-10 rounded-3xl`}
+          } cursor-pointer px-4 sm:px-6 py-[0.40rem] z-10 rounded-3xl`}
           href="/skills"
         >
           Skills
@@ -70,7 +70,7 @@ const Navbar = () => {
         <Link
           className={`${
             pathname === "/contact" ? st.navbarActive : ""
-          } cursor-pointer px-6 py-[0.40rem] z-10 rounded-3xl`}
+          } cursor-pointer px-4 sm:px-6 py-[0.40rem] z-10 rounded-3xl`}
           href="/contact"
         >
           Contact

@@ -85,6 +85,22 @@
   animation: gradientAnimation 30s linear infinite;
 }
 
+.textarea-container {
+  width: 100%;
+}
+
+.expandable-textarea {
+  width: 100%;
+  resize: none; /* Prevent manual resizing */
+  min-height: 50px; /* Set a minimum height to prevent collapsing */
+  max-height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: height 0.2s; /* Add a smooth transition for the height change */
+}
+
 @keyframes gradientAnimation {
   /* 0% {
     background-position: 100% 0;

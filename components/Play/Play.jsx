@@ -1,23 +1,30 @@
+import { useMediaQuery } from "react-responsive";
 import styles from "../../styles";
-import { bodyVariants } from "../../utils/motion";
+import { bodyVariants, navVariants } from "../../utils/motion";
 import Projects from "./Projects";
 import { motion } from "framer-motion";
 
 const Play = () => {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: "(min-width: 500px)",
+  });
+
   return (
     <motion.div
-      // variants={bodyVariants}
-      // initial="hidden"
-      // whileInView="show"
-      className={`${styles.xPaddings} flex flex-col relative justify-between items-center gap-10 contain`}
+      variants={navVariants}
+      initial="hidden"
+      whileInView="show"
+      className={`${
+        isDesktopOrLaptop ? styles.xPaddings : styles.yPaddings
+      } flex flex-col relative justify-between items-center gap-10 sm:gap-0 lg:gap-10 contain`}
     >
       <div
         className={`${styles.yPaddings} flex justify-center mx-auto items-center flex-col relative z-10`}
       >
         <motion.div
-          // variants={bodyVariants}
-          // initial="hidden"
-          // whileInView="show"
+          variants={navVariants}
+          initial="hidden"
+          whileInView="show"
           className="flex items-center"
         >
           <h1 className="text-[50px] sm:text-[127px] trans text-color-text-primary font-titleFont">
@@ -30,7 +37,7 @@ const Play = () => {
           />
         </motion.div>
         <p
-          className={`${styles.primaryContent} text-center text-[16px] sm:text-[22px] sm:w-[70%]`}
+          className={`${styles.primaryContent} text-center text-[16px] px-4 sm:text-[22px] sm:w-[70%]`}
         >
           A collection of tools and sites I've created, designed to be helpful,
           fun, <span className="font-ampFont italic"> & </span> sometimes just a

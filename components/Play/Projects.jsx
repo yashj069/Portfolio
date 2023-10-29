@@ -6,14 +6,19 @@ import { useMediaQuery } from "react-responsive";
 
 const Projects = () => {
   const isDesktopOrLaptop = useMediaQuery({
+    query: "(min-width: 1024px)",
+  });
+  const isTablet = useMediaQuery({
     query: "(min-width: 768px)",
   });
 
   return (
     typeof window !== "undefined" && (
       <Masonry
-        className={isDesktopOrLaptop ? st.collageContainer : ""}
-        columns={isDesktopOrLaptop ? 3 : 1}
+        className={`${
+          isDesktopOrLaptop ? st.collageContainer : ""
+        } px-6 sm:px-0`}
+        columns={isDesktopOrLaptop ? 3 : isTablet ? 2 : 1}
         gap={isDesktopOrLaptop ? 26 : 16}
       >
         {projectDescription.map((item, index) => {

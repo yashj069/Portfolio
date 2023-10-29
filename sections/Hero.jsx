@@ -27,28 +27,28 @@ const Hero = () => {
             <span className="flex items-end">
               <img
                 src="https://www.seanhalpin.xyz/hp/star-2.svg"
-                className="w-[40px] h-[40px] sm:w-[66px] sm:h-[66px] flex z-1000 opacity-[1] trans"
+                className="w-[40px] h-[40px] sm:w-[66px] sm:h-[66px] mr-[20px] flex z-1000 opacity-[1] trans"
               />
             </span>
           ) : null}
           <span className="flex flex-col items-center">
-            <h1 className="font-titleFont text-[50px] sm:text-[127px]">
+            <h1 className="font-titleFont text-[50px] md:text-[80px] lg:text-[127px]">
               Hi. I'm Yash.
             </h1>
-            <h1 className="font-titleFont text-[50px] sm:text-[127px] mt-[-30px] sm:mt-[-80px]">
+            <h1 className="font-titleFont text-[50px] md:text-[80px] lg:text-[127px] mt-[-30px] md:mt-[-40px] lg:mt-[-80px]">
               A Developer.
             </h1>
           </span>
           {isDesktopOrLaptop ? (
-            <span className="flex items-start ml-[-100px]">
+            <span className="flex items-start lg:ml-[-100px]">
               <img
                 src="https://www.seanhalpin.xyz/hp/star-2.svg"
-                className="w-[40px] h-[40px] sm:w-[66px] sm:h-[66px] flex z-1000 opacity-[1] mb-10 trans"
+                className="w-[40px] h-[40px] sm:w-[66px] sm:h-[66px] flex z-1000 opacity-[1] mb-10 lg:ml-[30px] trans"
               />
             </span>
           ) : null}
         </div>
-        <div className="flex flex-col sm:flex-row justify-center mt-[50px] w-full sm:w-[80%] mx-auto ">
+        <div className="flex flex-col sm:flex-row sm:gap-20 lg:gap-0 items-center justify-center mt-[50px] w-full lg:w-[80%] mx-auto ">
           <div className="h-[474px] w-[345px] bg-green-500 rounded-t-[50%] flex flex-col justify-between">
             <Image
               src={faces}
@@ -69,7 +69,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="flex flex-col mx-auto justify-start w-full sm:w-[50%] gap-4 sm:gap-10">
+          <div className="flex flex-col mx-auto justify-start w-full md:w-[50%] gap-4 sm:gap-10">
             <h1 className="text-font-h2-display text-color-text-primary font-[700] leading-[100%] sm:leading-[110%] pt-[40px] font-titleFont">
               I'm a Frontend Developer currently working at Rizzle.
             </h1>

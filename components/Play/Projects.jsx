@@ -23,9 +23,10 @@ const Projects = () => {
       >
         {projectDescription.map((item, index) => {
           return (
-            <div
+            <a
               key={index}
-              // style={{ transition: "all ease-in-out 0.3" }}
+              href={item.link}
+              target="_blank"
               className={`${st.project} project rounded-xl z-50 bg-color-white30 flex gap-10 max-w-[430px] flex-wrap p-[24px] sm:p-[42px]`}
             >
               <div className="flex flex-col items-start gap-4">
@@ -37,7 +38,7 @@ const Projects = () => {
                 <p className={`${styles.primaryContent}`}>{item.description}</p>
               </div>
               <img src={item.image} className="rounded-xl" />
-            </div>
+            </a>
           );
         })}
       </Masonry>

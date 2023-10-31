@@ -9,12 +9,9 @@
   font-family: "Eudoxus Sans", sans-serif, "acorn", "gt";
   scroll-behavior: smooth;
   max-width: 100%;
-
-  /* margin: auto; */
 }
 
 .header {
-  /* background-size: 400% 400%; */
   width: 100%;
   background: linear-gradient(-45deg, #d9b99b, #faf0e6, #fff0db, #eed9c4);
   animation: animate 15s ease infinite;
@@ -51,26 +48,6 @@
   transform: translateY(-5px);
 }
 
-/* .animateHero {
-  width: 100%;
-  background-color: var(--color-primary);
-  animation: example 30s ease infinite;
-}
-@keyframes example {
-  0% {
-    background-color: #d9b99b;
-  }
-  25% {
-    background-color: rgba(60, 107, 60, 0.577);
-  }
-  50% {
-    background-color: #fff0db;
-  }
-  100% {
-    background-color: #eed9c4;
-  }
-} */
-
 .partition {
   width: 100%;
   height: 2px;
@@ -79,7 +56,6 @@
 
 .animateHero {
   width: 100%;
-  /* height: 100vh; */
   background: linear-gradient(90deg, #d9b99b, #afa192, #fff0db, #eed9c4);
   background-size: 400% 100%;
   animation: gradientAnimation 30s linear infinite;
@@ -102,18 +78,6 @@
 }
 
 @keyframes gradientAnimation {
-  /* 0% {
-    background-position: 100% 0;
-  }
-  25% {
-    background-position: 50% 0;
-  }
-  50% {
-    background-position: -50% 0;
-  }
-  100% {
-    background-position: -100% 0;
-  } */
   0% {
     background-color: #d9b99b;
     background-position: 100% 80%;
@@ -155,20 +119,19 @@
   justify-content: center;
 }
 
+/* styles.css */
 @font-face {
-  font-family: acorn;
-  src: url(/font/acorn.ttf) format("ttf");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+  font-family: "Acorn";
+  src: url("/fonts/Acorn.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: gt;
-  src: url(/font/gt.woff) format("ttf");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+  font-family: "gt";
+  src: url("/fonts/gt.ttf") format("truetype");
+}
+
+body {
+  font-family: "Acorn", "gt", sans-serif;
 }
 
 :root {

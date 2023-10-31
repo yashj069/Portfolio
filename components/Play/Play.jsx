@@ -1,6 +1,6 @@
 import { useMediaQuery } from "react-responsive";
 import styles from "../../styles";
-import { bodyVariants, navVariants } from "../../utils/motion";
+import { navVariants } from "../../utils/motion";
 import Projects from "./Projects";
 import { motion } from "framer-motion";
 
@@ -21,12 +21,7 @@ const Play = () => {
       <div
         className={`${styles.yPaddings} flex justify-center mx-auto items-center flex-col relative z-10`}
       >
-        <motion.div
-          variants={navVariants}
-          initial="hidden"
-          whileInView="show"
-          className="flex items-center"
-        >
+        <div className="flex items-center ml-[8%]">
           <h1 className="text-[50px] sm:text-[127px] trans text-color-text-primary font-titleFont">
             Play.
           </h1>
@@ -35,7 +30,7 @@ const Play = () => {
             className="w-[40px] h-[40px] sm:w-[66px] sm:h-[66px] z-1000 opacity-[1] mb-10 trans"
             style={{ transition: "all ease-in-out 0.2" }}
           />
-        </motion.div>
+        </div>
         <p
           className={`${styles.primaryContent} text-center text-[16px] px-4 sm:text-[22px] sm:w-[70%]`}
         >

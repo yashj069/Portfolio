@@ -21,7 +21,7 @@ export const navVariants = {
 
 export const bodyVariants = {
   hidden: {
-    opacity: 0.5,
+    opacity: 0,
     y: -50,
     transition: {
       type: "spring",
@@ -35,7 +35,28 @@ export const bodyVariants = {
     transition: {
       type: "spring",
       stiffness: 40,
-      delay: 0.01,
+      delay: 0.4,
+    },
+  },
+};
+
+export const heroVariants = {
+  hidden: {
+    opacity: 0,
+    y: -40,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 140,
+    },
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 40,
+      delay: 0.8,
     },
   },
 };

@@ -4,15 +4,16 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { staggerContainer } from "../utils/motion";
 import styles from "../styles";
+import { heroVariants } from "../utils/motion";
 import SpotifyIcon from "../icons/SpotifyIcon";
 import faces from "../public/faces.jpg";
-import st from "../components/index.module.css";
 import { useMediaQuery } from "react-responsive";
 
 const Hero = () => {
   const isDesktopOrLaptop = useMediaQuery({
     query: "(min-width: 768px)",
   });
+
   return (
     <section className={`${styles.paddings} sm:pl-16 pl-6 text-white`}>
       <motion.div
@@ -48,7 +49,13 @@ const Hero = () => {
             </span>
           ) : null}
         </div>
-        <div className="flex flex-col sm:flex-row sm:gap-20 lg:gap-0 items-center justify-center mt-[50px] w-full lg:w-[80%] mx-auto ">
+        <motion.div
+          variants={heroVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: "false", amount: 0.25 }}
+          className="flex flex-col sm:flex-row sm:gap-20 lg:gap-0 items-center justify-center mt-[50px] w-full lg:w-[80%] mx-auto "
+        >
           <div className="h-[474px] w-[345px] bg-green-500 rounded-t-[50%] flex flex-col justify-between">
             <Image
               src={faces}
@@ -78,7 +85,7 @@ const Hero = () => {
               front-end development, game development, backend and WEB 3.
             </p>
           </div>
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );

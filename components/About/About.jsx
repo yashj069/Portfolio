@@ -1,7 +1,6 @@
 "use client";
 import { Explore, GetStarted, Hero } from "../../sections";
 import styles from "../../styles";
-import st from "../index.module.css";
 import { motion } from "framer-motion";
 import { bodyVariants, navVariants } from "../../utils/motion";
 

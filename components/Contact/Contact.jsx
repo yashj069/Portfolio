@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
 import styles from "../../styles";
+import { motion } from "framer-motion";
+import { navVariants } from "../../utils/motion";
 
 const Contact = () => {
   const [text, setText] = useState("");
@@ -21,7 +23,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex contain items-center ">
+    <motion.div
+      variants={navVariants}
+      initial="hidden"
+      whileInView="show"
+      className="flex contain items-center "
+    >
       <div className="mt-[100px] flex flex-col justify-between">
         <h1 className="flex justify-center text-[50px] sm:text-[127px] items-center flex-col relative z-10 text-color-text-primary font-titleFont">
           Contact
@@ -116,7 +123,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

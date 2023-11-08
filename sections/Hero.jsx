@@ -34,10 +34,10 @@ const Hero = () => {
             </span>
           ) : null}
           <span className="flex flex-col items-center">
-            <h1 className="font-titleFont text-[50px] md:text-[80px] lg:text-[127px]">
+            <h1 className="font-titleFont text-[45px] xs:text-[50px] md:text-[80px] lg:text-[127px]">
               Hi. I'm Yash.
             </h1>
-            <h1 className="font-titleFont text-[50px] md:text-[80px] lg:text-[127px] mt-[-30px] md:mt-[-40px] lg:mt-[-80px]">
+            <h1 className="font-titleFont text-[45px] xs:text-[50px] md:text-[80px] lg:text-[127px] mt-[-30px] md:mt-[-40px] lg:mt-[-80px]">
               A Developer.
             </h1>
           </span>

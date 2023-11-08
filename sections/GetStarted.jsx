@@ -10,7 +10,7 @@ const GetStarted = () => (
       className={`${styles.primaryContent} text-font-body flex flex-col gap-4 px-2 sm:px-0  sm:w-[60%] mx-auto justify-between`}
     >
       {aboutDesc.map((desc) => {
-        return <p>{desc}</p>;
+        return <p className="px-2">{desc}</p>;
       })}
     </div>
   </section>

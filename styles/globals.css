@@ -61,6 +61,24 @@
   animation: gradientAnimation 30s linear infinite;
 }
 
+.animateHero1 {
+  width: 100%;
+  background: linear-gradient(90deg, #d9b99b, #afa192, #fff0db, #eed9c4);
+  background-size: 400% 100%;
+  animation: gradientAnimation1 30s linear infinite;
+}
+
+@keyframes gradientAnimation1 {
+  0% {
+    background-color: #d9b99b;
+    background-position: 100% 0%;
+  }
+  100% {
+    background-color: #afa192;
+    background-position: 100% 0;
+  }
+}
+
 .textarea-container {
   width: 100%;
 }
@@ -94,13 +112,6 @@
     background-color: #ffebd7;
     background-position: 100% 0;
   }
-
-  /* 0% {
-    background-position: 100% 0;
-  }
-  100% {
-    background-position: -100% 0;
-  } */
 }
 
 .scrolled {

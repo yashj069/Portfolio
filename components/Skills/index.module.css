@@ -1,0 +1,24 @@
+.skillContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 40px;
+  border-radius: 40px;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}

@@ -22,9 +22,9 @@ export const collaborate = [
 ];
 
 export const aboutDesc = [
-  "Before I stepped into the world of product design, I was a web developer. One of my earliest jobs involved writing HTML emails, in a time before email linters. Lots of wishing, hoping, and finger crossing that your email arrived in a recipient's inbox in one piece.",
-  "Coding emails forced me to understand how HTML and CSS play together, a skill set I've carried and kept fresh in the years since. My side project work is just an excuse to satisfy my curiosity about new technologies and understand how the web is moving forward.",
-  "Outside work, I enjoy good coffee near my home by the sea, listening to and playing music, exploring the world with my partner, and playing with my Labrottie pup, Louie.",
+  "Before I stepped into the world of Web development, I was a game developer. One of my earliest jobs involved writing C# script and unity3D software. Lots of wishing, hoping, and finger crossing that your game is working properly.",
+  "Coding actions forced me to understand how HTML and CSS play together, a skill set I've carried and kept fresh in the years since. My side project work is just an excuse to satisfy my curiosity about new technologies and understand how the web is moving forward.",
+  "Outside work, I enjoy good coffee near my home by the sea, listening to and playing music.",
 ];
 
 export const footerLinks = [
@@ -42,7 +42,8 @@ export const projectDescription = [
     title: "Rizzle",
     link: "https://rizzle.com/",
     image: "/rizzleImg.png",
-    description: "fdsfd",
+    description:
+      "Rizzle is an AI tool for creating compelling videos in minutes with premium stock media, no editing needed.",
   },
   {
     title: "Degen Run",
@@ -79,4 +80,26 @@ export const projectDescription = [
     description:
       "LOBT is a freelance project made with React.js and TailwindCSS.",
   },
+];
+
+export const skillIcons = [
+  "https://cdn.svgporn.com/logos/react.svg",
+  "https://cdn.svgporn.com/logos/nextjs-icon.svg",
+  "/unity.png",
+  "/tailwindlogo.png",
+  "/c++.png",
+  "https://cdn.svgporn.com/logos/javascript.svg",
+  "https://cdn.svgporn.com/logos/typescript-icon.svg",
+  "/graphql.png",
+  "https://cdn.svgporn.com/logos/redux.svg",
+  "https://cdn.svgporn.com/logos/firebase.svg",
+  "https://cdn.svgporn.com/logos/nodejs-icon.svg",
+  "https://cdn.svgporn.com/logos/express.svg",
+  "https://cdn.svgporn.com/logos/mongodb.svg",
+];
+
+export const inProgressIcon = [
+  "/solidityIcon.png",
+  "/metamask.png",
+  "/Web3.svg",
 ];

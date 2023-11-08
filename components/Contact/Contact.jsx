@@ -1,13 +1,51 @@
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import styles from "../../styles";
 import { motion } from "framer-motion";
 import { navVariants } from "../../utils/motion";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [text, setText] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const textareaRef = useRef(null);
+
+  const form = useRef();
+
+  const [err, seterr] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (name.length === 0 || text.length === 0) {
+      seterr("Please fill the form correctly!");
+      return;
+    }
+    emailjs
+      .sendForm(
+        "service_ws69e03",
+        "template_s7yiqgo",
+        form.current,
+        "eXa-7imbti_CH8bbr"
+      )
+      .then(
+        (result) => {
+          e.target.reset();
+          toast.success("Sent Successfully");
+          seterr("");
+          console.log("Yes");
+          setName("");
+          setEmail("");
+          setText("");
+        },
+        (error) => {
+          console.log(error.text);
+          // toast.error(error.text);
+        }
+      );
+  };
 
   // use localstorage
 
@@ -29,16 +67,21 @@ const Contact = () => {
       whileInView="show"
       className="flex contain items-center "
     >
+      <ToastContainer />
       <div className="mt-[100px] flex flex-col justify-between">
         <h1 className="flex justify-center text-[50px] sm:text-[127px] items-center flex-col relative z-10 text-color-text-primary font-titleFont">
           Contact
         </h1>
         <div>
           <div className="flex flex-col sm:flex-row gap-10 sm:gap-20 justify-between mt-10 border-[2px] border-green-800 rounded-3xl p-12">
-            <form className="flex flex-col gap-2">
+            <form
+              className="flex flex-col gap-2"
+              ref={form}
+              onSubmit={sendEmail}
+            >
               <div class="relative z-0 mb-6 group">
                 <input
-                  name="floating_password"
+                  name="name"
                   id="floating_password"
                   class="block pt-2.5 pb-1.5 px-0 w-full text-[20px] font-titleFont text-color-text-primary bg-transparent border-0 border-b-2 border-green-200 appearance-none dark:text-color-text-primary dark:border-green-800 dark:focus:text-color-text-primary focus:outline-none focus:ring-0 focus:text-color-text-primary peer"
                   placeholder=" "
@@ -56,7 +99,7 @@ const Contact = () => {
               <div class="relative z-0 mb-6 group">
                 <input
                   type="email"
-                  name="floating_email"
+                  name="email"
                   id="floating_email"
                   class="block pt-2.5 pb-1.5 px-0 w-full text-[20px] font-titleFont text-color-text-primary bg-transparent border-0 border-b-2 appearance-none dark:text-color-text-primary dark:border-green-800 dark:focus:text-color-text-primary focus:outline-none focus:ring-0 focus:text-color-text-primary peer"
                   placeholder=" "
@@ -75,7 +118,7 @@ const Contact = () => {
               <div class="relative z-0 mb-6 group">
                 <textarea
                   ref={textareaRef}
-                  name="repeat_password"
+                  name="msg"
                   id="floating_repeat_password"
                   rows={1}
                   placeholder=""
@@ -95,6 +138,7 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
+                value="send"
                 className="text-white bg-green-800 w-sm hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-green-800 dark:hover:bg-green-700 dark:focus:ring-blue-800"
                 style={{ width: "120px" }}
               >

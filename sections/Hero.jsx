@@ -6,7 +6,9 @@ import styles from "../styles";
 import { heroVariants } from "../utils/motion";
 import SpotifyIcon from "../icons/SpotifyIcon";
 // import faces from "../public/faces.jpg";
+import fs from "../public/portf.webp";
 import { useMediaQuery } from "react-responsive";
+import Image from "next/image";
 
 const Hero = () => {
   const isDesktopOrLaptop = useMediaQuery({
@@ -56,8 +58,10 @@ const Hero = () => {
           className="flex flex-col sm:flex-row sm:gap-20 lg:gap-0 items-center justify-center mt-[50px] w-full lg:w-[80%] mx-auto "
         >
           <div className="h-[474px] w-[345px] bg-green-500 rounded-t-[50%] flex flex-col justify-between">
-            <img
+            <Image
               src={fs}
+              height="40px"
+              width="40px"
               className="object-cover h-[384px] w-[384px] rotate-180 rounded-b-full"
             />
             <div className="bg-color-primary-accent h-[90px] px-[20px] py-[24px] flex justify-center gap-7 items-center">
